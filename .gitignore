@@ -8,6 +8,8 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
+.env
+.env.local
 
 # Native
 .kotlin/
@@ -39,3 +41,7 @@ yarn-error.*
 app-example
 
 .env.local
+.env
+.env
+.env
+.env

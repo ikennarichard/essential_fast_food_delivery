@@ -33,16 +33,18 @@ export default Sentry.wrap(function RootLayout() {
     "QuickSand-Light": require("../assets/fonts/Quicksand-Light.ttf"),
   });
 
+  // throw new Error("My first Sentry error!");
+
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error]);
 
   if (!fontsLoaded) {
-    // Async font loading only occurs in development.
     return null;
   }
 
   return <Stack screenOptions={{ headerShown: false }} />;
 });
-Sentry.showFeedbackWidget();
+
+// Sentry.showFeedbackWidget();
