@@ -9,7 +9,7 @@ export const appwriteConfig = {
     platform: "com.richyyyy.fast_food",
     databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!,
     bucketId: '',
-    userCollectionId: '',
+    userCollectionId: '68a606950020225141e9',
     categoriesCollectionId: process.env.EXPO_PUBLIC_CATEGORY_COLLECTION_ID!,
     menuCollectionId: '',
     customizationsCollectionId: '',
