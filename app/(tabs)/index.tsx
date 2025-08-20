@@ -1,5 +1,5 @@
-import { StyleSheet, View, Text } from "react-native";
-
+import * as Sentry from "@sentry/react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
@@ -7,6 +7,12 @@ export default function HomeScreen() {
     <SafeAreaView>
       <View>
         <Text>Hello World</Text>
+        <Button
+          title="Try!"
+          onPress={() => {
+            Sentry.captureException(new Error("First error"));
+          }}
+        />
       </View>
     </SafeAreaView>
   );
