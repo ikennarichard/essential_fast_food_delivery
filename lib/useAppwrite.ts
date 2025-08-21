@@ -19,10 +19,13 @@ const useAppwrite = <T, P extends Record<string, string | number>>({
   params = {} as P,
   skip = false,
 }: UseAppwriteOptions<T, P>): UseAppwriteReturn<T, P> => {
+
+  // local state variables
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(!skip);
   const [error, setError] = useState<string | null>(null);
 
+  // fetch data handler
   const fetchData = useCallback(
     async (fetchParams: P) => {
       setLoading(true);
