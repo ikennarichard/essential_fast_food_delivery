@@ -44,7 +44,7 @@ export default function Index() {
                     <View
                       className={cn(
                         "offer-card__info",
-                        isEven ? "pl-10" : "pr-10"
+                        isEven ? "pl-4" : "pr-5"
                       )}
                     >
                       <Text className="h1-bold text-white leading-tight">
@@ -69,7 +69,7 @@ export default function Index() {
             <View className="flex-start">
               <Text className="small-bold text-primary">DELIVER TO</Text>
               <TouchableOpacity className="flex-center flex-row gap-x-1 mt-0.5">
-                <Text className="paragraph-bold text-dark-100">Croatia</Text>
+                <Text className="paragraph-bold text-dark-100">Emene</Text>
                 <Image
                   source={images.arrowDown}
                   className="size-3"
