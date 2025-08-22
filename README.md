@@ -1,50 +1,249 @@
-# Welcome to your Expo app 👋
+# **Essential Fast Food Delivery**
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**📗 Table of Contents**
 
-## Get started
+- 📖 [About the Project](#about-project)
+  - 🛠 [Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - 🚀 [Live Demo](#live-demo)
+- 💻 [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- 👥 [Authors](#authors)
+- 🔭 [Future Features](#future-features)
+- 🤝 [Contributing](#contributing)
+- ⭐️ [Show your support](#support)
+- 🙏 [Acknowledgements](#acknowledgements)
+- ❓ [FAQ](#faq)
+- 📝 [License](#license)
 
-1. Install dependencies
+## 📖 Essential Fast Food Delivery <a name="about-project"></a>
 
-   ```bash
-   npm install
-   ```
+**Essential Fast Food Delivery** is a modern cross-platform mobile application that connects customers with their favorite fast food restaurants for quick and reliable food delivery services.
 
-2. Start the app
+**Essential Fast Food Delivery** is a comprehensive food delivery platform built with Expo React Native that provides seamless ordering experience, real-time order tracking, and efficient delivery management system.
 
-   ```bash
-   npx expo start
-   ```
+## 🛠 Built With <a name="built-with"></a>
 
-In the output, you'll find options to open the app in a
+### Tech Stack <a name="tech-stack"></a>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://expo.dev/">Expo</a></li>
+    <li><a href="https://reactnative.dev/">React Native</a></li>
+    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+    <li><a href="https://docs.expo.dev/router/introduction/">Expo Router</a></li>
+  </ul>
+</details>
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://appwrite.io/">Appwrite</a></li>
+    <li><a href="https://appwrite.io/docs/server/functions">Appwrite Cloud Functions</a></li>
+  </ul>
+</details>
 
-## Get a fresh project
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://appwrite.io/docs/server/databases">Appwrite Database</a></li>
+    <li><a href="https://appwrite.io/docs/server/storage">Appwrite Storage</a></li>
+  </ul>
+</details>
 
-When you're ready, run:
+<details>
+  <summary>Services</summary>
+  <ul>
+    <li><a href="https://sentry.io/">Sentry</a></li>
+    <!-- <li><a href="https://developers.google.com/maps">Google Maps API</a></li>
+    <li><a href="https://stripe.com/">Stripe</a></li> -->
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+- **Multi-Restaurant Support** - Browse and order from multiple fast food restaurants
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://expo.dev/@yourusername/essential-fast-food-delivery)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites <a name="prerequisites"></a>
+
+In order to run this project you need:
+
+- Node.js (v18 or higher)
+- pnpm package manager
+- Expo CLI
+- Appwrite account (cloud or self-hosted)
+- Sentry account
+- Google Maps API key
+- Stripe account
 
 ```bash
-npm run reset-project
+# Install pnpm globally
+npm install -g pnpm
+
+# Install Expo CLI
+pnpm install -g @expo/cli
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Setup <a name="setup"></a>
 
-## Learn more
+Clone this repository to your desired folder:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone https://github.com/yourusername/essential_fast_food_delivery.git
+cd essential_fast_food_delivery
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Install <a name="install"></a>
 
-## Join the community
+Install this project with:
 
-Join our community of developers creating universal apps.
+```bash
+pnpm install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Create your environment file:
+
+```bash
+cp .env.example .env
+```
+
+Update the `.env` file with your configuration:
+
+```env
+EXPO_PUBLIC_APPWRITE_ENDPOINT=https://your-appwrite-endpoint
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
+EXPO_PUBLIC_SENTRY_DSN=your_sentry_dsn
+```
+
+### Usage <a name="usage"></a>
+
+To run the project, execute the following command:
+
+```bash
+# Start development server
+pnpm start
+
+# Run on iOS simulator
+pnpm run ios
+
+# Run on Android emulator
+pnpm run android
+```
+
+### Run tests <a name="run-tests"></a>
+
+To run tests, run the following command:
+
+```bash
+# Run all tests
+pnpm test
+
+# Run tests with coverage
+pnpm run test:coverage
+
+# Run type checking
+pnpm run type-check
+```
+
+### Deployment <a name="deployment"></a>
+
+You can deploy this project using:
+
+```bash
+# Install EAS CLI
+pnpm install -g @expo/eas-cli
+
+# Configure EAS
+eas build:configure
+
+# Build for production
+eas build --platform all
+
+# Submit to app stores
+eas submit --platform ios
+eas submit --platform android
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Your Name**
+
+- GitHub: [@yourusername](https://github.com/ikenna)
+- Twitter: [@yourusername](https://twitter.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourusername)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **AI-Powered Recommendations** - Smart meal suggestions based on user preferences
+- **Voice Ordering** - Order food using voice commands
+- **Loyalty Program** - Reward system for frequent customers
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please give it a ⭐️ and share it with your friends!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank:
+
+- Microverse for the project inspiration
+- The Expo team for the amazing development platform
+- Appwrite team for the excellent backend services
+- The React Native community for continuous support
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+- **Do I need a paid Appwrite account to run this project?**
+  - No, you can use Appwrite's free tier or self-host Appwrite for development.
+
+- **Can I run this on physical devices during development?**
+  - Yes, use the Expo Go app to scan the QR code from `pnpm start` command.
+
+- **How do I configure push notifications?**
+  - Push notifications are handled through Expo's notification service. Configure your credentials in the Expo dashboard.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

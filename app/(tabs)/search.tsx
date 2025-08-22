@@ -6,11 +6,12 @@ import { MenuItem } from "@/types";
 import cn from "clsx";
 import { useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
-import { FlatList, Text, View } from "react-native";
+import { Button, FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import Filter from "@/components/Filter";
 import SearchBar from "@/components/SearchBar";
+import seed from "@/lib/seed";
 
 const Search = () => {
   const { category, query } = useLocalSearchParams<{
@@ -74,6 +75,7 @@ const Search = () => {
         )}
         ListEmptyComponent={() => !loading && <Text>No results</Text>}
       />
+    
     </SafeAreaView>
   );
 };

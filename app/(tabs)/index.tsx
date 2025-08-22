@@ -1,6 +1,7 @@
 import cn from "clsx";
 import { Fragment } from "react";
 import {
+  Button,
   FlatList,
   Image,
   Pressable,
@@ -12,10 +13,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
+import seed from "@/lib/seed";
+import { Logger } from "@/utils/logger";
 
 export default function Index() {
   return (
     <SafeAreaView className="flex-1 bg-white">
+      <Button
+        title="Seed Data"
+        onPress={() => seed().catch((e) => Logger.error("seed data", e))}
+      />
       <FlatList
         data={offers}
         renderItem={({ item, index }) => {
